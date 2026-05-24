@@ -1,21 +1,55 @@
 # Project 3: Spots
 
-### Overview  
+## Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+Spots is a responsive photo-sharing webpage built from a Figma design as part of the TripleTen Software Engineering program.
+
+The project adapts across desktop, tablet, and mobile screen sizes using responsive web design techniques.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- Flexbox
+- CSS Grid
+- Media Queries
+- Git & GitHub
+- GitHub Pages
+
+## Features
+
+- Responsive layout
+- Profile section with editable styling
+- Responsive card grid
+- Hover effects
+- Overflow text handling with ellipsis
+- SVG icon implementation
+- GitHub Pages deployment
+
+## Future Improvements
+
+- Add JavaScript functionality for interactive buttons
+- Create editable profile popups
+- Add functionality for creating new posts
+- Improve accessibility features
+- Add animations and transitions
+- Optimize images further for performance
+
+## Deployment
+
+- Live Project:
+  https://malonemk1.github.io/se_project_spots/
+
+## Project Video
+
+- Loom Video Walkthrough:
+  https://www.loom.com/share/512cfc6b574a4953a9e95cdafe0777e5
+
+## Figma Design
+
+- Figma Project:
+  https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1
+
+## Author
+
+Eric
