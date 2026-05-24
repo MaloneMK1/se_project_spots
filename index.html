@@ -18,14 +18,109 @@
   </head>
   <body>
     <div class="page">
-      <header class="header"></header>
+      <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="Spots logo" />
+      </header>
 
       <main class="content">
-        <section class="profile"></section>
-        <section class="cards"></section>
+        <section class="profile">
+          <img
+            class="profile__avatar"
+            src="./images/avatar.jpg"
+            alt="Bessie Coleman"
+          />
+
+          <div class="profile__info">
+            <div class="profile__text">
+              <h1 class="profile__title">Bessie Coleman</h1>
+              <p class="profile__description">Civil Aviator</p>
+            </div>
+
+            <button class="profile__edit-btn" type="button">
+              <img
+                class="profile__edit-icon"
+                src="./images/edit-icon.svg"
+                alt="Edit icon"
+              />
+              Edit Profile
+            </button>
+          </div>
+
+          <button class="profile__add-btn">+ New Post</button>
+        </section>
+        <section class="cards">
+          <article class="card">
+            <img
+              class="card__image"
+              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+              alt="Val Thorens"
+            />
+            <div class="card__content">
+              <h2 class="card__title">Val Thorens</h2>
+              <button class="card__like-btn" type="button">♡</button>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="card__image"
+              src="./images/2-photo-by-ceiline-from-pexels.jpg"
+              alt="Restaurant terrace"
+            />
+            <div class="card__content">
+              <h2 class="card__title">Restaurant terrace</h2>
+              <button class="card__like-btn" type="button">♡</button>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="card__image"
+              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+              alt="Outdoor cafe"
+            />
+            <div class="card__content">
+              <h2 class="card__title">Outdoor cafe</h2>
+              <button class="card__like-btn" type="button">♡</button>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="card__image"
+              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+              alt="A very long bridge over the forest"
+            />
+            <div class="card__content">
+              <h2 class="card__title">A very long bridge, over the forest</h2>
+              <button class="card__like-btn" type="button">♡</button>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="card__image"
+              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+              alt="Tunnel with morning light"
+            />
+            <div class="card__content">
+              <h2 class="card__title">Tunnel with morning light</h2>
+              <button class="card__like-btn" type="button">♡</button>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              class="card__image"
+              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+              alt="Mountain house"
+            />
+            <div class="card__content">
+              <h2 class="card__title">Mountain house</h2>
+              <button class="card__like-btn" type="button">♡</button>
+            </div>
+          </article>
+        </section>
       </main>
 
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <p class="footer__copyright">2024 © Spots</p>
+      </footer>
     </div>
   </body>
 </html>
