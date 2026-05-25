@@ -38,7 +38,7 @@ The project adapts across desktop, tablet, and mobile screen sizes using respons
 ## Deployment
 
 - Live Project:
-  https://malonemk1.github.io/se_project_spots/
+  https://github.com/MaloneMK1/se_project_spots
 
 ## Project Video
 
@@ -52,4 +52,4 @@ The project adapts across desktop, tablet, and mobile screen sizes using respons
 
 ## Author
 
-Eric
+Eric Malone
