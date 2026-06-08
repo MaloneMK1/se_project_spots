@@ -37,6 +37,8 @@ The project adapts across desktop, tablet, and mobile screen sizes using respons
 
 ## Deployment
 
+https://MaloneMK1.github.io/se_project_spots/
+
 - Live Project:
   https://github.com/MaloneMK1/se_project_spots
 

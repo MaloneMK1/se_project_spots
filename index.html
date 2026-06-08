@@ -158,5 +158,111 @@
         <p class="footer__copyright">2024 © Spots</p>
       </footer>
     </div>
+    <div class="modal modal_is-opened">
+      <div class="modal__container">
+        <button class="modal__close-btn" type="button">
+          <svg
+            class="modal__close-icon"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 24L24 8"
+              stroke="#212121"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M24 24L8 8"
+              stroke="#212121"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <h2 class="modal__title">Edit profile</h2>
+
+        <form class="modal__form" name="edit-profile">
+          <label class="modal__label">
+            Name
+            <input
+              class="modal__input"
+              type="text"
+              name="name"
+              value="Bessie Coleman"
+            />
+          </label>
+
+          <label class="modal__label">
+            Description
+            <input
+              class="modal__input"
+              type="text"
+              name="description"
+              value="Civil Aviator"
+            />
+          </label>
+
+          <button class="modal__submit-btn" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__container">
+        <button class="modal__close-btn" type="button">
+          <svg
+            class="modal__close-icon"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 24L24 8"
+              stroke="#212121"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M24 24L8 8"
+              stroke="#212121"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <h2 class="modal__title">New post</h2>
+
+        <form class="modal__form" name="new-post">
+          <label class="modal__label">
+            Image Link
+            <input
+              class="modal__input"
+              type="url"
+              name="image-link"
+              placeholder="Image URL"
+            />
+          </label>
+
+          <label class="modal__label">
+            Caption
+            <input
+              class="modal__input"
+              type="text"
+              name="caption"
+              placeholder="Caption"
+            />
+          </label>
+
+          <button class="modal__submit-btn" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
