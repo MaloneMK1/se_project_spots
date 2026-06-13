@@ -24,22 +24,28 @@ The project adapts across desktop, tablet, and mobile screen sizes using respons
 - Hover effects
 - Overflow text handling with ellipsis
 - SVG icon implementation
+- Edit Profile modal
+- New Post modal
+- Form submission handling with JavaScript
+- Dynamic profile updates without page refresh
+- Smooth modal transitions
 - GitHub Pages deployment
 
 ## Future Improvements
 
-- Add JavaScript functionality for interactive buttons
-- Create editable profile popups
-- Add functionality for creating new posts
+- Allow users to create and display new post cards dynamically
+- Add form validation and error messaging
+- Add image preview functionality
 - Improve accessibility features
-- Add animations and transitions
+- Add keyboard navigation for modals
 - Optimize images further for performance
 
 ## Deployment
 
-https://MaloneMK1.github.io/se_project_spots/
-
 - Live Project:
+  https://MaloneMK1.github.io/se_project_spots/
+
+- GitHub Repository:
   https://github.com/MaloneMK1/se_project_spots
 
 ## Project Video
