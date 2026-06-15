@@ -89,3 +89,31 @@
   line-height: 1;
   cursor: pointer;
 }
+
+.modal__close-btn:hover {
+  opacity: 0.6;
+}
+
+.modal__submit-btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 627px) {
+  .modal {
+    padding-top: 116px;
+  }
+
+  .modal__container {
+    max-width: calc(100% - 20px);
+    padding: 22px 12px 12px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__close-btn {
+    top: 22px;
+    right: 12px;
+  }
+}
