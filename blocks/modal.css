@@ -6,8 +6,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 207px;
+  align-items: center;
   box-sizing: border-box;
   transition:
     visibility 0s linear 0.3s,
@@ -99,10 +98,6 @@
 }
 
 @media screen and (max-width: 627px) {
-  .modal {
-    padding-top: 116px;
-  }
-
   .modal__container {
     max-width: calc(100% - 20px);
     padding: 22px 12px 12px;
@@ -115,5 +110,9 @@
   .modal__close-btn {
     top: 22px;
     right: 12px;
+  }
+
+  .modal__submit-btn {
+    width: 100%;
   }
 }
