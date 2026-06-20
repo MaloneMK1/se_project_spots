@@ -1,29 +1,36 @@
 const initialCards = [
   {
-    name: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    name: "Landscape view",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
   {
-    name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
-  },
-  {
-    name: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
-  },
-  {
-    name: "A very long bridge, over the forest and through the trees",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
+    name: "Mountain house",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
   {
     name: "Tunnel with morning light",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
   },
   {
-    name: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
+    name: "A very long bridge, over the forest and through the trees",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
+  },
+  {
+    name: "An outdoor cafe",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
+  },
+  {
+    name: "Restaurant terrace",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
+  },
+  {
+    name: "Val Thorens",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
 
 const editProfileButton = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -47,6 +54,11 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 const imageInput = newPostModal.querySelector('input[name="image-link"]');
 const captionInput = newPostModal.querySelector('input[name="caption"]');
 
+const previewModal = document.querySelector("#preview-modal");
+const previewModalCloseButton = previewModal.querySelector(".modal__close-btn");
+const previewImage = previewModal.querySelector(".modal__preview-image");
+const previewCaption = previewModal.querySelector(".modal__preview-caption");
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
@@ -67,10 +79,47 @@ function handleEditProfileSubmit(evt) {
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
 
-  console.log(imageInput.value);
-  console.log(captionInput.value);
+  const cardData = {
+    name: captionInput.value,
+    link: imageInput.value,
+  };
+  const cardElement = getCardElement(cardData);
 
+  cardsList.prepend(cardElement);
+  newPostForm.reset();
   closeModal(newPostModal);
+}
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
+  const deleteButton = cardElement.querySelector(".card__delete-btn");
+  const likeButton = cardElement.querySelector(".card__like-btn");
+
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardTitle.textContent = data.name;
+
+  cardImage.addEventListener("click", function () {
+    previewImage.src = data.link;
+    previewImage.alt = data.name;
+    previewCaption.textContent = data.name;
+
+    openModal(previewModal);
+  });
+
+  deleteButton.addEventListener("click", function () {
+    cardElement.remove();
+  });
+
+  likeButton.addEventListener("click", function () {
+    likeButton.classList.toggle("card__like-btn_active");
+  });
+
+  return cardElement;
 }
 
 editProfileButton.addEventListener("click", function () {
@@ -92,9 +141,15 @@ newPostCloseButton.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
+previewModalCloseButton.addEventListener("click", function () {
+  closeModal(previewModal);
+});
+
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 newPostForm.addEventListener("submit", handleNewPostSubmit);
 
-initialCards.forEach(function (card) {
-  console.log(card.name);
+initialCards.forEach(function (cardData) {
+  const cardElement = getCardElement(cardData);
+
+  cardsList.prepend(cardElement);
 });
