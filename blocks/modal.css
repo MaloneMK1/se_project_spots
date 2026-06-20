@@ -149,6 +149,10 @@
     max-width: 90vw;
   }
 
+  .modal__preview-caption {
+    font-size: 16px;
+  }
+
   .modal__preview-container .modal__close-btn {
     top: -40px;
     right: 0;

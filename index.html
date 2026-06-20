@@ -58,22 +58,18 @@
     <template id="card-template">
       <li class="card">
         <img class="card__image" />
-        <button class="card__delete-btn" type="button" aria-label="Delete card">
-          <img
-            class="card__delete-icon"
-            src="./images/delete-icon.svg"
-            alt=""
-          />
-        </button>
+        <button
+          class="card__delete-btn"
+          type="button"
+          aria-label="Delete card"
+        ></button>
         <div class="card__content">
           <h2 class="card__title"></h2>
-          <button class="card__like-btn" type="button">
-            <img
-              class="card__like-icon"
-              src="./images/like-icon.svg"
-              alt="Like"
-            />
-          </button>
+          <button
+            class="card__like-btn"
+            type="button"
+            aria-label="Like card"
+          ></button>
         </div>
       </li>
     </template>
@@ -217,7 +213,7 @@
           </svg>
         </button>
 
-        <img class="modal__preview-image" src="" alt="" />
+        <img class="modal__preview-image" alt="" />
         <p class="modal__preview-caption"></p>
       </div>
     </div>
