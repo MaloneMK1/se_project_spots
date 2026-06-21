@@ -108,17 +108,26 @@
   max-width: 80vw;
   max-height: 80vh;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .modal__preview-caption {
-  margin: 8px 0 0;
-  color: #fff;
+  margin: 0;
   font-size: 20px;
-  line-height: 1.2;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  position: absolute;
+  padding: 4px 8px;
+  background-color: #212121;
+  border-radius: 8px;
+  left: 0;
+  top: calc(100% + 10px);
 }
 
 .modal__preview-container .modal__close-btn {
-  top: -40px;
+  top: 0px;
   right: -40px;
 }
 
