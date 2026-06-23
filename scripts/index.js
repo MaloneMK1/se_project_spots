@@ -59,12 +59,31 @@ const previewModalCloseButton = previewModal.querySelector(".modal__close-btn");
 const previewImage = previewModal.querySelector(".modal__preview-image");
 const previewCaption = previewModal.querySelector(".modal__preview-caption");
 
+const validationConfig = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscape);
+}
+
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+
+    closeModal(openedModal);
+  }
 }
 
 function handleEditProfileSubmit(evt) {
@@ -87,6 +106,7 @@ function handleNewPostSubmit(evt) {
 
   cardsList.prepend(cardElement);
   newPostForm.reset();
+  resetValidation(newPostForm, validationConfig);
   closeModal(newPostModal);
 }
 
@@ -125,6 +145,7 @@ function getCardElement(data) {
 editProfileButton.addEventListener("click", function () {
   nameInput.value = profileTitle.textContent;
   descriptionInput.value = profileDescription.textContent;
+  resetValidation(editProfileForm, validationConfig);
 
   openModal(editProfileModal);
 });
@@ -145,6 +166,16 @@ previewModalCloseButton.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
+const modalList = [editProfileModal, newPostModal, previewModal];
+
+modalList.forEach(function (modal) {
+  modal.addEventListener("click", function (evt) {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 newPostForm.addEventListener("submit", handleNewPostSubmit);
 
@@ -153,3 +184,5 @@ initialCards.forEach(function (cardData) {
 
   cardsList.prepend(cardElement);
 });
+
+enableValidation(validationConfig);

@@ -4,7 +4,7 @@
 
 Spots is a responsive photo-sharing web application built from a Figma design as part of the TripleTen Software Engineering program.
 
-The project allows users to edit their profile information, create new photo cards, like cards, delete cards, and preview images in a larger modal view. The interface adapts seamlessly across desktop, tablet, and mobile screen sizes using responsive web design techniques.
+The project allows users to edit their profile information, create new photo cards, like cards, delete cards, preview images in a larger modal view, and validate user input through reusable JavaScript form validation. The interface adapts seamlessly across desktop, tablet, and mobile screen sizes using responsive web design techniques.
 
 ---
 
@@ -19,6 +19,9 @@ The project allows users to edit their profile information, create new photo car
 - BEM Methodology (Flat BEM)
 - DOM Manipulation
 - Event Listeners
+- Event Delegation
+- Form Validation
+- HTML5 Validation API (ValidityState)
 - HTML Template Elements
 - Git & GitHub
 - GitHub Pages
@@ -46,12 +49,13 @@ The project allows users to edit their profile information, create new photo car
 - Cards generated from a JavaScript data array
 - HTML `<template>` used for card creation
 - Dynamic rendering of card titles and images
+- New cards added to the beginning of the gallery
 
 ### Card Interactions
 
 - Like button functionality
 - Delete card functionality
-- New cards added dynamically through the New Post form
+- Dynamic card creation through the New Post form
 
 ### Image Preview Modal
 
@@ -60,23 +64,42 @@ The project allows users to edit their profile information, create new photo car
 - Responsive preview modal
 - Supports both portrait and landscape images
 
+### Form Validation
+
+- Reusable validation engine
+- Custom validation error messages
+- HTML5 validation attributes
+- Disabled submit buttons when inputs are invalid
+- Dynamic button state management
+- Error styling for invalid inputs
+- Validation reset when forms are reopened
+
+### Modal Functionality
+
+- Reusable modal open and close functions
+- Close modals using the Escape key
+- Close modals by clicking the overlay
+- Close modals using dedicated close buttons
+- Automatic cleanup of event listeners
+- Smooth open and close transitions
+
 ### User Experience
 
 - Hover effects on interactive elements
 - Overflow text handling with ellipsis
 - SVG icon implementation
-- Reusable modal open/close functions
+- Responsive layouts across supported screen sizes
 
 ---
 
 ## Future Improvements
 
-- Form validation with custom error messages
-- Close modals using the Escape key
-- Close modals by clicking the overlay
 - Persist cards using local storage
+- Connect forms to a back-end database
+- User authentication and profiles
 - Improved accessibility and keyboard navigation
-- Additional card filtering and sorting features
+- Card filtering and sorting options
+- Drag-and-drop image uploads
 
 ---
 
