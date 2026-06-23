@@ -1,3 +1,12 @@
+const validationConfig = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
 function showInputError(formElement, inputElement, errorMessage, settings) {
   const errorElement = formElement.querySelector(`#${inputElement.name}-error`);
 
@@ -66,16 +75,18 @@ function enableValidation(settings) {
   formList.forEach((formElement) => setEventListeners(formElement, settings));
 }
 
-function resetValidation(formElement, settings) {
+function resetValidation(formElement) {
   const inputList = Array.from(
-    formElement.querySelectorAll(settings.inputSelector),
+    formElement.querySelectorAll(validationConfig.inputSelector),
   );
   const buttonElement = formElement.querySelector(
-    settings.submitButtonSelector,
+    validationConfig.submitButtonSelector,
   );
 
   inputList.forEach((inputElement) => {
-    hideInputError(formElement, inputElement, settings);
+    hideInputError(formElement, inputElement, validationConfig);
   });
-  toggleButtonState(inputList, buttonElement, settings);
+  toggleButtonState(inputList, buttonElement, validationConfig);
 }
+
+enableValidation(validationConfig);

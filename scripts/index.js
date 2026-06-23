@@ -30,7 +30,7 @@ const initialCards = [
 ];
 
 const cardTemplate = document.querySelector("#card-template");
-const cardsList = document.querySelector(".cards__list");
+const cardsContainer = document.querySelector(".cards__list");
 
 const editProfileButton = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -58,15 +58,6 @@ const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseButton = previewModal.querySelector(".modal__close-btn");
 const previewImage = previewModal.querySelector(".modal__preview-image");
 const previewCaption = previewModal.querySelector(".modal__preview-caption");
-
-const validationConfig = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__submit-btn_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
-};
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
@@ -104,9 +95,9 @@ function handleNewPostSubmit(evt) {
   };
   const cardElement = getCardElement(cardData);
 
-  cardsList.prepend(cardElement);
+  cardsContainer.prepend(cardElement);
   newPostForm.reset();
-  resetValidation(newPostForm, validationConfig);
+  resetValidation(newPostForm);
   closeModal(newPostModal);
 }
 
@@ -145,7 +136,7 @@ function getCardElement(data) {
 editProfileButton.addEventListener("click", function () {
   nameInput.value = profileTitle.textContent;
   descriptionInput.value = profileDescription.textContent;
-  resetValidation(editProfileForm, validationConfig);
+  resetValidation(editProfileForm);
 
   openModal(editProfileModal);
 });
@@ -182,7 +173,5 @@ newPostForm.addEventListener("submit", handleNewPostSubmit);
 initialCards.forEach(function (cardData) {
   const cardElement = getCardElement(cardData);
 
-  cardsList.prepend(cardElement);
+  cardsContainer.prepend(cardElement);
 });
-
-enableValidation(validationConfig);
