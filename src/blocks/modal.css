@@ -32,6 +32,10 @@
   transition: transform 0.3s ease;
 }
 
+.modal__container_type_delete {
+  width: 430px;
+}
+
 .modal_is-opened .modal__container,
 .modal_is-opened .modal__preview-container {
   transform: scale(1);
@@ -172,6 +176,10 @@
   .modal__container {
     max-width: calc(100% - 20px);
     padding: 22px 12px 12px;
+  }
+
+  .modal__container_type_delete {
+    width: calc(100% - 20px);
   }
 
   .modal__title {
