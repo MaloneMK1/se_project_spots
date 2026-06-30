@@ -4,7 +4,7 @@
 
 Spots is a responsive photo-sharing web application built from a Figma design as part of the TripleTen Software Engineering program.
 
-The project allows users to edit their profile information, create new photo cards, like cards, delete cards, preview images in a larger modal view, and validate user input through reusable JavaScript form validation. The interface adapts seamlessly across desktop, tablet, and mobile screen sizes using responsive web design techniques.
+The project allows users to load profile information and cards from an API, edit their profile and avatar, create new photo cards, like and unlike cards, delete cards with confirmation, preview images in a larger modal view, and validate user input through reusable JavaScript form validation. The interface adapts seamlessly across desktop, tablet, and mobile screen sizes using responsive web design techniques.
 
 ---
 
@@ -13,6 +13,12 @@ The project allows users to edit their profile information, create new photo car
 - HTML5
 - CSS3
 - JavaScript (ES6)
+- JavaScript Modules
+- Webpack
+- Babel
+- PostCSS
+- REST API
+- Fetch API
 - Flexbox
 - CSS Grid
 - Media Queries
@@ -41,20 +47,24 @@ The project allows users to edit their profile information, create new photo car
 
 - Edit Profile modal
 - Pre-filled form fields
-- Dynamic profile updates without page refresh
+- Dynamic profile updates with server persistence
+- Avatar update modal
 - Smooth modal transitions
 
 ### Dynamic Card Generation
 
-- Cards generated from a JavaScript data array
+- Cards loaded from the API
 - HTML `<template>` used for card creation
 - Dynamic rendering of card titles and images
 - New cards added to the beginning of the gallery
+- New cards persist after page refresh
 
 ### Card Interactions
 
 - Like button functionality
-- Delete card functionality
+- Like state persists after page refresh
+- Delete confirmation modal
+- Delete card functionality with server persistence
 - Dynamic card creation through the New Post form
 
 ### Image Preview Modal
@@ -86,6 +96,7 @@ The project allows users to edit their profile information, create new photo car
 ### User Experience
 
 - Hover effects on interactive elements
+- Loading button text while API requests are in progress
 - Overflow text handling with ellipsis
 - SVG icon implementation
 - Responsive layouts across supported screen sizes
@@ -94,8 +105,6 @@ The project allows users to edit their profile information, create new photo car
 
 ## Future Improvements
 
-- Persist cards using local storage
-- Connect forms to a back-end database
 - User authentication and profiles
 - Improved accessibility and keyboard navigation
 - Card filtering and sorting options
@@ -115,11 +124,15 @@ https://github.com/MaloneMK1/se_project_spots
 
 ---
 
-## Project Video
+## Project Pitch Videos
 
 ### Loom Walkthrough
 
 https://www.loom.com/share/512cfc6b574a4953a9e95cdafe0777e5
+
+### Final Project Pitch
+
+Add your final project pitch video link here after recording.
 
 ---
 

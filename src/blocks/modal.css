@@ -32,6 +32,11 @@
   transition: transform 0.3s ease;
 }
 
+.modal__container_type_delete {
+  width: 430px;
+  padding: 32px 40px;
+}
+
 .modal_is-opened .modal__container,
 .modal_is-opened .modal__preview-container {
   transform: scale(1);
@@ -60,9 +65,17 @@
   font-weight: 500;
 }
 
+.modal__title_type_delete {
+  margin-bottom: 40px;
+}
+
 .modal__form {
   display: flex;
   flex-direction: column;
+}
+
+.modal__form_type_delete {
+  align-items: flex-start;
 }
 
 .modal__label {
@@ -114,6 +127,10 @@
   font-size: 16px;
   line-height: 1;
   cursor: pointer;
+}
+
+.modal__submit-btn_type_delete {
+  width: 156px;
 }
 
 .modal__close-btn:hover {
@@ -174,8 +191,17 @@
     padding: 22px 12px 12px;
   }
 
+  .modal__container_type_delete {
+    width: calc(100% - 20px);
+    padding: 22px 12px 12px;
+  }
+
   .modal__title {
     font-size: 20px;
+  }
+
+  .modal__title_type_delete {
+    margin-bottom: 32px;
   }
 
   .modal__close-btn {
